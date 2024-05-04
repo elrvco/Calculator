@@ -13,16 +13,17 @@ body{
 #calc {
     display: flex;
     justify-content: center;
-    aspect-ratio: 1/1;
+    align-content: center;
+    background-color: hsl(222, 26%, 31%)  ;
 }
 
-#container {
-    border:10px solid black;
+#btn-container {
+    padding:10px;
     display:grid;
-    grid-template-columns: 24% 24% 24% 24%;
-    grid-template-rows: minmax(18%, auto) repeat(5, 14%);
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: minmax(10%, auto) repeat(5, 10%);
     grid-gap: 5px;
-    height:20%;
+    background-color: hsl(223, 31%, 20%);
 
 }   
 
