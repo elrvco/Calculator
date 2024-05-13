@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <main id="calc">
-        <div id="container">
+    <main id="main-container">
+        <div id="calculator-container">
+            <div id="title-theme-container">
+                <div id="title">calc</div>
+                <div id="theme">theme</div>
+                <div id="toggle-container">
+                    <input type="checkbox" id="toggle">
+                    <label for="toggle" class="switch"></label>
+                </div>
+            </div>
             <div id="display"></div>
             <div id="btn-container">
                 <button type="button" class="clear" id="clear">AC</button>

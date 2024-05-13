@@ -1,5 +1,8 @@
 html {
     box-sizing: border-box;
+    font-size: 32px;
+    font-family:'League Spartan';
+    font-weight: 700;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -10,27 +13,136 @@ body{
     margin: 0;
 }
 
-#calc {
-    display: flex;
+#main-container {
+    background-color: hsl(222, 26%, 31%);
+    display:flex;
     justify-content: center;
     align-content: center;
-    background-color: hsl(222, 26%, 31%)  ;
+    width: 100vw;
+    height: 100vh;
+}
+
+button{
+    font-size: 32px;
+    font-family:'League Spartan';
+    font-weight: 700;
+    color:hsl(221, 14%, 31%);
+    border-radius: 10px;
+    background-color: hsl(30, 25%, 89%) ;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.297);
+}
+
+#calculator-container{
+    min-width: 340px;
+    min-height:400px;
+    margin-top: 60px;
+    background-color: hsl(222, 26%, 31%);
+
+   
+}
+
+#title-theme-container{
+    background-color: hsl(222, 26%, 31%);
+    display: flex;
+    align-items: center;
+    color:hsl(180,0%,100%);
+    margin:7px;
+    height:35px;
+}
+
+#title{
+    font-size:.8rem;
+    flex-basis: 60%;
+   
+}
+
+#theme{
+    font-size:.5rem;
+    text-align: end;
+    flex-basis: 20%;
+}
+
+#toggle-container{
+    display:flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    flex-basis: 20%;
+}
+
+#display{
+    background-color: hsl(223, 31%, 20%);
+    margin-bottom: 15px;
+    display:flex;
+    align-items: center;
+    justify-content: end;
+    color: hsl(180,0%,100%);
+    padding: 15px 7px 13px 0px;
+    border-radius: 8px;
+    height: 60px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.297);
+    
 }
 
 #btn-container {
     padding:10px;
     display:grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: minmax(10%, auto) repeat(5, 10%);
-    grid-gap: 5px;
+    grid-template-columns: repeat(4,22%);
+    grid-template-rows: repeat(5, 16.8%);
+    grid-gap: 4%;
     background-color: hsl(223, 31%, 20%);
-
+    height: 270px;
+    border-radius: 8px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.297);
 }   
-
-#display{
-    grid-column: 1 / -1;
-}
 
 #zero{
     grid-column:span 2;
 }
+
+#equal{
+    background-color:hsl(6, 63%, 50%);
+    color:white;
+    font-size: .7rem;
+}
+
+#clear{
+    background-color: hsl(225, 21%, 49%);
+    color:white;
+    font-size: .7rem;
+
+}
+
+
+.switch {
+    position: relative;
+    width: 70%;
+    height: 75%;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 17px;
+    transition: background-color 0.3s;
+  }
+  
+  .switch::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    width: 40%;
+    height: 65%;
+    border-radius: 50%;
+    background-color: hsl(6, 63%, 50%);
+    transition: transform 0.3s;
+  }
+  
+  #toggle {
+    display: none;
+  }
+  
+  #toggle:checked + .switch {
+    background-color: white;
+  }
+  
+  #toggle:checked + .switch::before {
+    transform: translateX(100%);
+  }
+  

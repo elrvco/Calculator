@@ -25,7 +25,7 @@ function operate(operator,firstNum,secondNum){
 };
 
 let counter=0;
-let display=document.querySelector('#display');
+const display=document.querySelector('#display');
 display.textContent = '0';
 const operandBtns = document.querySelectorAll('.operand');
 operandBtns.forEach((number)=>{ //this method displays the numbers on the calculator display
@@ -114,3 +114,47 @@ decimalBtn.addEventListener('click',()=>{
         secondNum = display.textContent
     }
 })
+
+// theme change feature
+
+const toggle = document.querySelector('#toggle')
+const mainContainer= document.querySelector('#main-container');
+const calContainer = document.querySelector('#calculator-container');
+const header = document.querySelector('#title-theme-container')
+const title = document.querySelector('#title');
+const theme = document.querySelector('#theme');
+//display is already declared 
+const btnContainer = document.querySelector('#btn-container');
+const btns = document.querySelectorAll('.sign, .operator, .operand, .decimal');
+
+toggle.addEventListener('change',(event)=>{
+    if (event.target.checked) {
+       mainContainer.style.backgroundColor = 'hsl(0, 0%, 90%)';
+       calContainer.style.backgroundColor = 'hsl(0, 0%, 90%)';
+       header.style.backgroundColor = 'hsl(0, 0%, 90%)';
+       title.style.color = 'hsl(60, 10%, 19%)';
+       theme.style.color = 'hsl(60, 10%, 19%)';
+       display.style.backgroundColor = 'hsl(0, 0%, 93%)';
+       display.style.color = 'hsl(221, 14%, 31%)';
+       btnContainer.style.backgroundColor = 'hsl(0, 5%, 81%)';
+       btns.forEach((btn)=>{
+        btn.style.backgroundColor = 'hsl(45, 7%, 89%)';
+        btn.style.color = 'hsl(60, 10%, 19%)';
+       })
+    }else{
+       mainContainer.style.backgroundColor = 'hsl(222, 26%, 31%)';
+       calContainer.style.backgroundColor = 'hsl(222, 26%, 31%)';
+       header.style.backgroundColor = 'hsl(222, 26%, 31%)';
+       title.style.color = 'hsl(180,0%,100%)';
+       theme.style.color = 'hsl(180,0%,100%)';
+       display.style.backgroundColor = 'hsl(223, 31%, 20%)';
+       display.style.color = 'hsl(180,0%,100%)';
+       btnContainer.style.backgroundColor = 'hsl(223, 31%, 20%)';
+       btns.forEach((btn)=>{
+        btn.style.backgroundColor = 'hsl(30, 25%, 89%)';
+        btn.style.color = 'hsl(221, 14%, 31%)';
+       })
+    }
+})
+
+
